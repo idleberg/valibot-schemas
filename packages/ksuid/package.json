@@ -1,7 +1,7 @@
 {
 	"name": "valibot-schema-ksuid",
 	"version": "0.1.0",
-	"description": "Valibot schema for KSUID",
+	"description": "Valibot schema for K-Sortable Unique IDentifiers (KSUID)",
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
