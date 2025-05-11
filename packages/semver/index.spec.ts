@@ -1,7 +1,7 @@
+import { randomUUID } from 'node:crypto';
 import { parse, safeParse } from 'valibot';
 import { describe, expect, test } from 'vitest';
 import { semver, semverRange } from './index.ts';
-import { randomUUID } from 'node:crypto';
 
 describe('semver version', () => {
 	test('valid', () => {
