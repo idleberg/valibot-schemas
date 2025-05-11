@@ -13,7 +13,11 @@
 ## Installation
 
 ```shell
-npm install -D valibot-schema-semver
+# NodeJS
+npm install valibot-schema-semver
+
+# Deno
+deno add jsr:@idleberg/valibot-schema-semver
 ```
 
 ## Usage

@@ -13,7 +13,11 @@
 ## Installation
 
 ```shell
+# NodeJS
 npm install -D valibot-schema-ksuid
+
+# Deno
+deno add jsr:@idleberg/valibot-schema-ksuid
 ```
 
 ## Usage
