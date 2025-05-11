@@ -11,6 +11,9 @@ const message = (value: { received: string }): string => {
 	return `Invalid Semantic Versioning, received ${value.received}`;
 };
 
+/**
+ * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
+ */
 export const semver: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(check, message);
 
 export type SemverSchema = InferOutput<typeof semver>;

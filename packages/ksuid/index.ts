@@ -12,6 +12,9 @@ const message = (value: { received: string }): string => {
 	return `Invalid KSUID, received ${value.received}`;
 };
 
+/**
+ * A schema for validating KSUIDs {@see {@link https://github.com/segmentio/ksuid}}.
+ */
 export const ksuid: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(check, message);
 
 export type KsuidSchema = InferOutput<typeof ksuid>;

@@ -17,7 +17,14 @@ const messageRange = (value: { received: string }): string => {
 	return `Invalid Semantic Versioning range, received ${value.received}`;
 };
 
+/**
+ * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
+ */
 export const semver: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(check, message);
+
+/**
+ * A schema for validating Semantic Versioning ranges {@see {@link https://semver.org/}}.
+ */
 export const semverRange: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(
 	checkRange,
 	messageRange,
