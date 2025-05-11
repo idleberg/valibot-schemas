@@ -7,13 +7,17 @@ const check = (value: unknown): boolean => {
 	return typeof value === 'string' && SEMVER_REGEX.test(value);
 };
 
-const message = (value: { received: string }): string => {
+const defaultMessage = (value: CustomIssue): string => {
 	return `Invalid type: Expected Semantic Versioning received ${value.received}`;
+};
+
+export const semver = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
+
+	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
 /**
  * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
  */
-export const semver: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(check, message);
-
-export type SemverSchema = InferOutput<typeof semver>;
+export type SemverSchema = InferOutput<ReturnType<typeof semver>>;

@@ -28,9 +28,9 @@ import { semver, semverRange } from "valibot-schema-semver";
 
 const PackageJsonSchema = v.object({
 	name: v.pipe(v.string(), v.minLength(1), v.max(214)),
-	version: semver,
+	version: semver(),
 	engines: v.object({
-		node: semverRange,
+		node: semverRange(),
 	}),
 });
 ```
