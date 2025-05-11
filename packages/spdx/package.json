@@ -1,7 +1,7 @@
 {
-	"name": "valibot-schema-ksuid",
+	"name": "valibot-schema-spdx",
 	"version": "0.1.1",
-	"description": "Valibot schema for K-Sortable Unique IDentifiers (KSUID)",
+	"description": "Valibot schema for SPDX identifiers",
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
@@ -13,7 +13,7 @@
 	},
 	"keywords": [
 		"valibot-schema",
-		"ksuid",
+		"spdx",
 		"validation",
 		"schema"
 	],
@@ -23,7 +23,7 @@
 		"type": "git",
 		"url": "https://github.com/idleberg/valibot-schemas"
 	},
-	"homepage": "https://github.com/idleberg/valibot-schemas/tree/main/packages/ksuid",
+	"homepage": "https://github.com/idleberg/valibot-schemas/tree/main/packages/spdx",
 	"type": "module",
 	"exports": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -36,6 +36,7 @@
 		"README.md"
 	],
 	"dependencies": {
+		"spdx-license-list": "^6.10.0"
 	},
 	"devDependencies": {
 		"@types/node": "catalog:",
