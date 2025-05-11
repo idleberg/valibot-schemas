@@ -31,7 +31,7 @@ const PackageJsonSchema = v.object({
 });
 ```
 
-For simple version validation, you can also use a lightweight variant (~350B instead of 24kB):
+For simple version validation, you can also use a lightweight variant (~350B instead of 25kB). This uses the [official regular expression](https://regex101.com/r/vkijKf/1/) rather than the [parser by npm](https://www.npmjs.com/package/semver).
 
 ```javascript
 import { semver } from "valibot-schema-semver/light";
