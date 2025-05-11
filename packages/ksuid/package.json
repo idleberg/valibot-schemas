@@ -1,0 +1,41 @@
+{
+	"name": "valibot-schema-ksuid",
+	"version": "0.1.0",
+	"description": "Valibot schema for KSUID",
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"lint": "biome lint --no-errors-on-unmatched --vcs-enabled=true --vcs-use-ignore-file=true",
+		"prepack": "npm run build",
+		"publish:jsr": "deno publish",
+		"publish:npm": "np --no-yarn --any-branch",
+		"test": "vitest run"
+	},
+	"keywords": ["valibot-schema", "ksuid", "validation", "schema"],
+	"author": "Jan T. Sott",
+	"license": "MIT",
+	"type": "module",
+	"exports": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"engines": {
+		"node": "^18.0.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+	},
+	"files": [
+		"dist/",
+		"LICENSE",
+		"README.md"
+	],
+	"dependencies": {
+		"ksuid": "^3.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "catalog:",
+		"np": "catalog:",
+		"tsup": "catalog:",
+		"valibot": "catalog:",
+		"vitest": "catalog:"
+	},
+	"peerDependencies": {
+		"valibot": ">=1.0.0"
+	}
+}

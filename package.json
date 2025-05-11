@@ -1,0 +1,22 @@
+{
+	"name": "@idleberg/valibot-schemas",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "turbo build --log-order grouped",
+		"dev": "turbo dev",
+		"lint": "turbo lint --log-order grouped",
+		"test": "turbo test --log-order grouped"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@total-typescript/tsconfig": "^1.0.4",
+		"lefthook": "catalog:",
+		"turbo": "^2.5.3",
+		"vitest": "catalog:"
+	},
+	"packageManager": "pnpm@10.10.0"
+}
