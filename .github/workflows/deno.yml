@@ -43,7 +43,7 @@ jobs:
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Lint Source
-        run: deno lint --ignore=node_modules .
+        run: deno lint .
 
       - name: Run Tests
-        run: deno run -allow-all npm:vitest run
+        run: deno run --allow-all npm:vitest run
