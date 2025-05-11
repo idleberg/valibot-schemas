@@ -2,7 +2,7 @@
 
 > Valibot schema for [K-Sortable Unique IDentifiers](https://github.com/segmentio/ksuid).
 
-[![License](https://img.shields.io/github/license/idleberg/valibot-schema-ksuid?color=blue&style=for-the-badge)](https://github.com/idleberg/valibot-schema-ksuid/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/idleberg/valibot-schemas?color=blue&style=for-the-badge)](https://github.com/idleberg/valibot-schemas/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/valibot-schema-ksuid?style=for-the-badge)](https://www.npmjs.org/package/valibot-schema-ksuid)
 [![Version: jsr](https://img.shields.io/jsr/v/@idleberg/valibot-schema-ksuid?style=for-the-badge)](https://jsr.io/@idleberg/valibot-schema-ksuid)
 [![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/valibot-schemas/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/valibot-schemas/actions/workflows/node.yml)
