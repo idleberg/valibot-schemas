@@ -1,7 +1,7 @@
 {
 	"name": "@idleberg/valibot-schema-semver",
 	"version": "0.1.0",
-	"exports": "./index.ts",
+	"exports": ["./index.ts", "./light.ts"],
 	"publish": {
 		"include": ["jsr.json", "LICENSE", "README.md"]
 	}
