@@ -4,5 +4,8 @@
 	"exports": "./index.ts",
 	"publish": {
 		"include": ["./index.ts", "jsr.json", "LICENSE", "README.md"]
+	},
+	"import": {
+		"valibot": "@valibot/valibot"
 	}
 }

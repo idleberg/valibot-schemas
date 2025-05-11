@@ -7,5 +7,8 @@
 	},
 	"publish": {
 		"include": ["./index.ts", "./light.ts", "jsr.json", "LICENSE", "README.md"]
+	},
+	"import": {
+		"valibot": "@valibot/valibot"
 	}
 }
