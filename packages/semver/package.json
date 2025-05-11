@@ -1,6 +1,6 @@
 {
 	"name": "valibot-schema-semver",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Valibot schema for Semantic Versioning",
 	"scripts": {
 		"build": "tsup",
@@ -11,7 +11,12 @@
 		"publish:npm": "np --package-manager pnpm",
 		"test": "vitest run"
 	},
-	"keywords": ["valibot-schema", "semver", "validation", "schema"],
+	"keywords": [
+		"valibot-schema",
+		"semver",
+		"validation",
+		"schema"
+	],
 	"author": "Jan T. Sott",
 	"license": "MIT",
 	"repository": {
