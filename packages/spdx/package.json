@@ -1,6 +1,6 @@
 {
 	"name": "valibot-schema-spdx",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Valibot schema for SPDX identifiers",
 	"scripts": {
 		"build": "tsup",
