@@ -5,7 +5,7 @@
 	"publish": {
 		"include": ["./index.ts", "jsr.json", "LICENSE", "README.md"]
 	},
-	"import": {
+	"imports": {
 		"valibot": "jsr:@valibot/valibot"
 	}
 }
