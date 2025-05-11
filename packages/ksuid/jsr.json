@@ -6,6 +6,6 @@
 		"include": ["./index.ts", "jsr.json", "LICENSE", "README.md"]
 	},
 	"import": {
-		"valibot": "@valibot/valibot"
+		"valibot": "jsr:@valibot/valibot"
 	}
 }
