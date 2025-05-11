@@ -1,5 +1,5 @@
 import KSUID from 'ksuid';
-import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
+import { type InferOutput, custom } from 'valibot';
 
 // additional check required since KSUID.parse() accepts invalid Base62 strings
 const BASE62_REGEX = /^[A-Za-z0-9+/]{27}$/;
@@ -8,13 +8,19 @@ const check = (value: unknown): boolean => {
 	return typeof value === 'string' && BASE62_REGEX.test(value) && KSUID.isValid(KSUID.parse(value).raw);
 };
 
-const message = (value: { received: string }): string => {
-	return `Invalid KSUID, received ${value.received}`;
+const defaultMessage = (value: { received: string }): string => {
+	return `Invalid type: Expected KSUID received ${value.received}`;
 };
 
 /**
- * A schema for validating KSUIDs {@see {@link https://github.com/segmentio/ksuid}}.
+ * Creates a schema for validating KSUIDs with customizable error messages.
+ * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
+ * @returns A custom schema for KSUID validation.
  */
-export const ksuid: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(check, message);
+export const ksuid = (overrideMessage?: string | ((value: { received: string }) => string)) => {
+	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
 
-export type KsuidSchema = InferOutput<typeof ksuid>;
+	return custom<string>(check, message);
+};
+
+export type KsuidSchema = InferOutput<ReturnType<typeof ksuid>>;
