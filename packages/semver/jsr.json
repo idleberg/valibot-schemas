@@ -3,6 +3,6 @@
 	"version": "0.1.0",
 	"exports": ["./index.ts", "./light.ts"],
 	"publish": {
-		"include": ["jsr.json", "LICENSE", "README.md"]
+		"include": ["./index.ts", "./light.ts", "jsr.json", "LICENSE", "README.md"]
 	}
 }
