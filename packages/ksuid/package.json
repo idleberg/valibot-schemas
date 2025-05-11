@@ -1,6 +1,6 @@
 {
 	"name": "valibot-schema-ksuid",
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"description": "Valibot schema for KSUID",
 	"scripts": {
 		"build": "tsup",
