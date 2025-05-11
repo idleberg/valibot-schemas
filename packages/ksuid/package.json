@@ -36,6 +36,7 @@
 		"README.md"
 	],
 	"dependencies": {
+		"ksuid": "^3.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "catalog:",
