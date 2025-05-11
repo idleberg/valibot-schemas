@@ -1,8 +1,8 @@
+import { randomUUID } from 'node:crypto';
+import licenses from 'spdx-license-list';
 import { parse, safeParse } from 'valibot';
 import { expect, test } from 'vitest';
-import { spdx as spdxSchema, osi as osiSchema } from './index.ts';
-import licenses from 'spdx-license-list';
-import { randomUUID } from 'node:crypto';
+import { osi as osiSchema, spdx as spdxSchema } from './index.ts';
 
 const spdxLicenses = Object.keys(licenses);
 const osiLicenses = Object.entries(licenses)
