@@ -9,6 +9,6 @@
 		"include": ["./index.ts", "./light.ts", "jsr.json", "LICENSE", "README.md"]
 	},
 	"imports": {
-		"valibot": "jsr:@valibot/valibot"
+		"valibot": "jsr:@valibot/valibot@^1.1.0"
 	}
 }
