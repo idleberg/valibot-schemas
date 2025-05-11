@@ -18,25 +18,33 @@ const checkWithFilter = (value: unknown, osiOnly: boolean): boolean => {
 	return typeof value === 'string' && validIds.includes(value);
 };
 
-const message = (value: { received: string }): string => {
-	return `Invalid SPDX identifier, received ${value.received}`;
+const defaultMessage = (value: { received: string }): string => {
+	return `Invalid type: Expected SPDX identifier received ${value.received}`;
 };
 
 /**
  * A schema for validating SPDX identifiers {@see {@link https://spdx.github.io/}}.
  */
-export const spdx: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(
-	(value) => checkWithFilter(value, false),
-	message,
-);
+export const spdx = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+	const check = (value: unknown) => checkWithFilter(value, false);
+	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
 
+	return custom<string, ErrorMessage<CustomIssue>>(check, message);
+};
 /**
  * A schema for validating OSI-approved SPDX identifiers {@see {@link https://opensource.org/licenses/}}.
  */
-export const osi: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(
-	(value) => checkWithFilter(value, true),
-	message,
-);
+// export const osi: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(
+// 	(value) => checkWithFilter(value, true),
+// 	message,
+// );
 
-export type SpdxSchema = InferOutput<typeof spdx>;
-export type OsiSchema = InferOutput<typeof osi>;
+export const osi = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+	const check = (value: unknown) => checkWithFilter(value, true);
+	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
+
+	return custom<string, ErrorMessage<CustomIssue>>(check, message);
+};
+
+export type SpdxSchema = InferOutput<ReturnType<typeof spdx>>;
+export type OsiSchema = InferOutput<ReturnType<typeof osi>>;

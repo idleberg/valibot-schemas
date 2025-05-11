@@ -26,9 +26,9 @@ deno add jsr:@idleberg/valibot-schema-spdx
 import { parse } from "valibot";
 import { spdx, osi } from "valibot-schema-spdx";
 
-parse(spdx, "MIT"); // true
-parse(osi, "GPL-3.0-or-later"); // true
-parse(osi, "CC0-1.0"); // false
+parse(spdx(), "MIT"); // true
+parse(osi(), "GPL-3.0-or-later"); // true
+parse(osi(), "CC0-1.0"); // false
 ```
 
 ## License
