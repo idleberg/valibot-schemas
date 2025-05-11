@@ -1,5 +1,5 @@
 import KSUID from 'ksuid';
-import { type InferOutput, type CustomIssue, custom, type ErrorMessage } from 'valibot';
+import { type CustomIssue, type ErrorMessage, type InferOutput, custom } from 'valibot';
 
 // additional check required since KSUID.parse() accepts invalid Base62 strings
 const BASE62_REGEX = /^[A-Za-z0-9+/]{27}$/;
@@ -23,4 +23,7 @@ export const ksuid = (overrideMessage?: string | ((value: CustomIssue) => string
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
+/**
+ * A schema for validating KSUIDs {@see {@link https://github.com/segmentio/ksuid}}.
+ */
 export type KsuidSchema = InferOutput<ReturnType<typeof ksuid>>;
