@@ -26,7 +26,7 @@ deno add jsr:@idleberg/valibot-schema-ksuid
 import { parse } from "valibot";
 import { ksuid } from "valibot-schema-ksuid";
 
-const output = parse(ksuid, "aWgEPTl1tmebfsQzFP4bxwgy80V");
+const output = parse(ksuid(), "aWgEPTl1tmebfsQzFP4bxwgy80V");
 ```
 
 ## License
