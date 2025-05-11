@@ -1,6 +1,6 @@
 # valibot-schema-ksuid
 
-> Valibot schema for Semantic Versioning.
+> Valibot schema for [K-Sortable Unique IDentifiers](https://github.com/segmentio/ksuid).
 
 [![License](https://img.shields.io/github/license/idleberg/valibot-schema-ksuid?color=blue&style=for-the-badge)](https://github.com/idleberg/valibot-schema-ksuid/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/valibot-schema-ksuid?style=for-the-badge)](https://www.npmjs.org/package/valibot-schema-ksuid)

@@ -1,6 +1,6 @@
 # valibot-schema-semver
 
-> Valibot schema for Semantic Versioning.
+> Valibot schema for [Semantic Versioning](https://semver.org/).
 
 [![License](https://img.shields.io/github/license/idleberg/valibot-schema-semver?color=blue&style=for-the-badge)](https://github.com/idleberg/valibot-schema-semver/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/valibot-schema-semver?style=for-the-badge)](https://www.npmjs.org/package/valibot-schema-semver)
