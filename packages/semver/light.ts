@@ -8,7 +8,7 @@ const check = (value: unknown): boolean => {
 };
 
 const message = (value: { received: string }): string => {
-	return `Invalid Semantic Versioning, received ${value.received}`;
+	return `Invalid type: Expected Semantic Versioning received ${value.received}`;
 };
 
 /**

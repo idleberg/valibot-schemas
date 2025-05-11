@@ -14,7 +14,7 @@ test('invalid semver: short', () => {
 	const { success } = safeParse(semver, version);
 
 	expect(success).toBe(false);
-	expect(() => parse(semver, version)).toThrowError(`Invalid Semantic Versioning, received "${version}"`);
+	expect(() => parse(semver, version)).toThrowError(`Invalid type: Expected Semantic Versioning received "${version}"`);
 });
 
 test('invalid semver: long', () => {
@@ -22,7 +22,7 @@ test('invalid semver: long', () => {
 	const { success } = safeParse(semver, version);
 
 	expect(success).toBe(false);
-	expect(() => parse(semver, version)).toThrowError(`Invalid Semantic Versioning, received "${version}"`);
+	expect(() => parse(semver, version)).toThrowError(`Invalid type: Expected Semantic Versioning received "${version}"`);
 });
 
 test('valid semver range: simple', () => {
