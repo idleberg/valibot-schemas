@@ -16,6 +16,11 @@ const defaultMessage = (value: CustomIssue): string => {
 	return `Invalid type: Expected Semantic Versioning received ${value.received}`;
 };
 
+/**
+ * Function to validate Semantic Versioning strings.
+ * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
+ * @returns A custom schema for Semantic Versioning validation.
+ */
 export const semver = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
 
