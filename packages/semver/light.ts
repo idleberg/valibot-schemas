@@ -1,3 +1,8 @@
+/**
+ * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
+ * @module
+ */
+
 import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
 
 const SEMVER_REGEX =
@@ -17,7 +22,4 @@ export const semver = (overrideMessage?: string | ((value: CustomIssue) => strin
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
-/**
- * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
- */
 export type SemverSchema = InferOutput<ReturnType<typeof semver>>;

@@ -1,11 +1,10 @@
+/**
+ * A schema for validating SPDX license identifiers {@see {@link https://spdx.dev/}}.
+ * @module
+ */
+
 import licenses from 'spdx-license-list';
 import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
-
-type License = {
-	name: string;
-	url: string;
-	osiApproved: boolean;
-};
 
 const licenseIds = Object.keys(licenses);
 const osiIds = Object.entries(licenses)
@@ -23,7 +22,9 @@ const defaultMessage = (value: { received: string }): string => {
 };
 
 /**
- * A schema for validating SPDX identifiers {@see {@link https://spdx.github.io/}}.
+ * Function to validate SPDX license identifiers.
+ * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
+ * @returns A custom schema for SPDX license validation.
  */
 export const spdx = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
 	const check = (value: unknown) => checkWithFilter(value, false);
@@ -31,14 +32,12 @@ export const spdx = (overrideMessage?: string | ((value: CustomIssue) => string)
 
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
-/**
- * A schema for validating OSI-approved SPDX identifiers {@see {@link https://opensource.org/licenses/}}.
- */
-// export const osi: CustomSchema<string, ErrorMessage<CustomIssue> | undefined> = custom<string>(
-// 	(value) => checkWithFilter(value, true),
-// 	message,
-// );
 
+/**
+ * Function to validate OSI-approved SPDX license identifiers.
+ * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
+ * @returns A custom schema for OSI-approved SPDX license validation.
+ */
 export const osi = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
 	const check = (value: unknown) => checkWithFilter(value, true);
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;

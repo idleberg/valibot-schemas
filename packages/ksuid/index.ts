@@ -1,3 +1,8 @@
+/**
+ * A schema for validating r K-Sortable Unique IDentifiers {@see {@link https://github.com/segmentio/ksuid}}.
+ * @module
+ */
+
 import KSUID from 'ksuid';
 import { type CustomIssue, type ErrorMessage, type InferOutput, custom } from 'valibot';
 
@@ -13,7 +18,7 @@ const defaultMessage = (value: CustomIssue): string => {
 };
 
 /**
- * Creates a schema for validating KSUIDs with customizable error messages.
+ * Function to validate KSUIDs.
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
  * @returns A custom schema for KSUID validation.
  */
@@ -23,7 +28,4 @@ export const ksuid = (overrideMessage?: string | ((value: CustomIssue) => string
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
-/**
- * A schema for validating KSUIDs {@see {@link https://github.com/segmentio/ksuid}}.
- */
 export type KsuidSchema = InferOutput<ReturnType<typeof ksuid>>;

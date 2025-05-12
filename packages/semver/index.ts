@@ -1,3 +1,8 @@
+/**
+ * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
+ * @module
+ */
+
 import { valid, validRange } from 'semver';
 import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
 
@@ -18,9 +23,9 @@ const defaultMessageRange = (value: CustomIssue): string => {
 };
 
 /**
- * A schema for validating Semantic Versioning {@see {@link https://semver.org/}}.
+ * Function to validate Semantic Versioning strings.
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
- * @returns
+ * @returns A custom schema for Semantic Versioning validation.
  */
 export const semver = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
@@ -29,7 +34,9 @@ export const semver = (overrideMessage?: string | ((value: CustomIssue) => strin
 };
 
 /**
- * A schema for validating Semantic Versioning ranges {@see {@link https://semver.org/}}.
+ * Function to validate Semantic Versioning ranges.
+ * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
+ * @returns A custom schema for Semantic Versioning validation.
  */
 export const semverRange = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessageRange;
