@@ -26,7 +26,9 @@ const defaultMessage = (value: { received: string }): string => {
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
  * @returns A custom schema for SPDX license validation.
  */
-export const spdx = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+export const spdx = (
+	overrideMessage?: string | ((value: CustomIssue) => string),
+): CustomSchema<string, ErrorMessage<CustomIssue>> => {
 	const check = (value: unknown) => checkWithFilter(value, false);
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
 
@@ -38,7 +40,9 @@ export const spdx = (overrideMessage?: string | ((value: CustomIssue) => string)
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
  * @returns A custom schema for OSI-approved SPDX license validation.
  */
-export const osi = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+export const osi = (
+	overrideMessage?: string | ((value: CustomIssue) => string),
+): CustomSchema<string, ErrorMessage<CustomIssue>> => {
 	const check = (value: unknown) => checkWithFilter(value, true);
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
 

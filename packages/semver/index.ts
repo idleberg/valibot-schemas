@@ -27,7 +27,9 @@ const defaultMessageRange = (value: CustomIssue): string => {
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
  * @returns A custom schema for Semantic Versioning validation.
  */
-export const semver = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+export const semver = (
+	overrideMessage?: string | ((value: CustomIssue) => string),
+): CustomSchema<string, ErrorMessage<CustomIssue>> => {
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
 
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
@@ -38,7 +40,9 @@ export const semver = (overrideMessage?: string | ((value: CustomIssue) => strin
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
  * @returns A custom schema for Semantic Versioning validation.
  */
-export const semverRange = (overrideMessage?: string | ((value: CustomIssue) => string)) => {
+export const semverRange = (
+	overrideMessage?: string | ((value: CustomIssue) => string),
+): CustomSchema<string, ErrorMessage<CustomIssue>> => {
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessageRange;
 
 	return custom<string, ErrorMessage<CustomIssue>>(checkRange, message);
