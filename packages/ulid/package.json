@@ -1,6 +1,6 @@
 {
 	"name": "valibot-schema-ulid",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Valibot schema for Universally Unique Lexicographically Sortable Identifiers (ULID)",
 	"scripts": {
 		"build": "tsup",
