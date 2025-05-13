@@ -49,5 +49,14 @@ export const osi = (
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
+/**
+ * Type for the output of the SPDX schema.
+ * @typedef {InferOutput<ReturnType<typeof spdx>>} SpdxSchema
+ */
 export type SpdxSchema = InferOutput<ReturnType<typeof spdx>>;
+
+/**
+ * Type for the output of the OSI schema.
+ * @typedef {InferOutput<ReturnType<typeof osi>>} OsiSchema
+ */
 export type OsiSchema = InferOutput<ReturnType<typeof osi>>;
