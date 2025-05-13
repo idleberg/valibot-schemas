@@ -30,4 +30,8 @@ export const ksuid = (
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
+/**
+ * Type for the output of the KSUID schema.
+ * @typedef {InferOutput<ReturnType<typeof ksuid>>} KsuidSchema
+ */
 export type KsuidSchema = InferOutput<ReturnType<typeof ksuid>>;
