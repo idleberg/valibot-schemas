@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/valibot-schema-ksuid",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"exports": "./index.ts",
 	"publish": {
 		"include": ["./index.ts", "jsr.json", "LICENSE", "README.md"]
