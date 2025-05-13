@@ -29,4 +29,8 @@ export const semver = (
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
+/**
+ * Type for the output of the Semantic Versioning schema.
+ * @typedef {InferOutput<ReturnType<typeof semver>>} SemverSchema
+ */
 export type SemverSchema = InferOutput<ReturnType<typeof semver>>;

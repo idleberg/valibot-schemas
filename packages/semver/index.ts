@@ -48,5 +48,14 @@ export const semverRange = (
 	return custom<string, ErrorMessage<CustomIssue>>(checkRange, message);
 };
 
+/**
+ * Type for the output of the Semantic Versioning schema.
+ * @typedef {InferOutput<ReturnType<typeof semver>>} SemverSchema
+ */
 export type SemverSchema = InferOutput<ReturnType<typeof semver>>;
+
+/**
+ * Type for the output of the Semantic Versioning range schema.
+ * @typedef {InferOutput<ReturnType<typeof semverRange>>} SemverRangeSchema
+ */
 export type SemverRangeSchema = InferOutput<ReturnType<typeof semverRange>>;
