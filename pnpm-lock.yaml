@@ -125,9 +125,6 @@ importers:
 
   packages/ulid:
     dependencies:
-      ksuid:
-        specifier: ^3.0.0
-        version: 3.0.0
       ulid:
         specifier: ^3.0.0
         version: 3.0.0
