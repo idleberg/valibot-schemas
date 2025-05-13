@@ -27,4 +27,8 @@ export const ulid = (
 	return custom<string, ErrorMessage<CustomIssue>>(check, message);
 };
 
-export type KsuidSchema = InferOutput<ReturnType<typeof ulid>>;
+/**
+ * Type for the output of the ULID schema.
+ * @typedef {InferOutput<ReturnType<typeof ulid>>} UlidSchema
+ */
+export type UlidSchema = InferOutput<ReturnType<typeof ulid>>;
