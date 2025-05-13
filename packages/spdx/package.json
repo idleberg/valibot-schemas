@@ -8,7 +8,7 @@
 		"lint": "biome lint --no-errors-on-unmatched --vcs-enabled=true --vcs-use-ignore-file=true",
 		"prepack": "npm run build",
 		"publish:jsr": "deno publish",
-		"publish:npm": "np --package-manager pnpm",
+		"publish:npm": "np --no-tag --package-manager pnpm",
 		"test": "vitest run"
 	},
 	"keywords": [
