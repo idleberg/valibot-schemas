@@ -1,6 +1,6 @@
 # valibot-schema-ulid
 
-> Valibot schema for [Universally Unique Lexicographically Sortable Identifies](https://github.com/ulid/spec).
+> Valibot schema for [Universally Unique Lexicographically Sortable Identifiers](https://github.com/ulid/spec).
 
 [![License](https://img.shields.io/github/license/idleberg/valibot-schemas?color=blue&style=for-the-badge)](https://github.com/idleberg/valibot-schemas/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/valibot-schema-ulid?style=for-the-badge)](https://www.npmjs.org/package/valibot-schema-ulid)

@@ -1,5 +1,5 @@
 /**
- * A schema for validating r Universally Unique Lexicographically Sortable Identifies {@see {@link https://github.com/ulid/spec}}.
+ * A schema for validating r Universally Unique Lexicographically Sortable Identifiers {@see {@link https://github.com/ulid/spec}}.
  * @module
  */
 
