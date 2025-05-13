@@ -4,7 +4,7 @@ import { expect, test } from 'vitest';
 import { ulid as schema } from './index.ts';
 
 const validId = ulid();
-const invalidId = '@@@@@@@@@@@@@@@@@@@@@@@@@@@';
+const invalidId = '@@@@@@@@@@@@@@@@@@@@@@@@@@';
 
 test('valid ulid', () => {
 	const { success } = safeParse(schema(), validId);
