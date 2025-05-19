@@ -6,6 +6,7 @@ yarn.lock
 # Development
 .env
 .turbo/
+test.js
 
 # Build
 dist/
