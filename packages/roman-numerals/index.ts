@@ -13,7 +13,7 @@ const isValid = (value: string): boolean => {
 	} catch (e) {
 		return false;
 	}
-}
+};
 
 const check = (value: unknown): boolean => {
 	return typeof value === 'string' && isValid(value);

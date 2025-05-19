@@ -16,7 +16,9 @@ test('invalid roman numeral', () => {
 	const { success } = safeParse(schema(), invalidNumeral);
 
 	expect(success).toBe(false);
-	expect(() => parse(schema(), invalidNumeral)).toThrowError(`Invalid type: Expected roman numeral received "${invalidNumeral}"`);
+	expect(() => parse(schema(), invalidNumeral)).toThrowError(
+		`Invalid type: Expected roman numeral received "${invalidNumeral}"`,
+	);
 });
 
 test('invalid roman numeral, custom error string', () => {
