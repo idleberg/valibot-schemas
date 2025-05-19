@@ -1,5 +1,5 @@
 {
-	"name": "@idleberg/valibot-schema-roman-numeral",
+	"name": "@idleberg/valibot-schema-roman-numerals",
 	"version": "0.1.0",
 	"exports": "./index.ts",
 	"publish": {
