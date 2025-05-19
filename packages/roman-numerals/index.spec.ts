@@ -2,7 +2,7 @@ import { parse, safeParse } from 'valibot';
 import { expect, test } from 'vitest';
 import { romanNumeral as schema } from './index.ts';
 
-const validNumeral = "MCMLXXVI";
+const validNumeral = 'MCMLXXVI';
 const invalidNumeral = 'CIVIC';
 
 test('valid roman numeral', () => {
