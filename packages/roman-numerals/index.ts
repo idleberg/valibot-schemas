@@ -1,25 +1,34 @@
 /**
- * A schema for validating Universally Unique Lexicographically Sortable Identifiers {@see {@link https://github.com/ulid/spec}}.
+ * A schema for validating Roman numerals.
  * @module
  */
 
-import { isValid } from 'ulid';
+import romans from 'romans';
 import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
+
+const isValid = (value: string): boolean => {
+	try {
+		romans.deromanize(value);
+		return true;
+	} catch (e) {
+		return false;
+	}
+};
 
 const check = (value: unknown): boolean => {
 	return typeof value === 'string' && isValid(value);
 };
 
 const defaultMessage = (value: CustomIssue): string => {
-	return `Invalid type: Expected ULID received ${value.received}`;
+	return `Invalid type: Expected roman numeral received ${value.received}`;
 };
 
 /**
- * Function to validate ULIDs.
+ * Function to validate roman numerals.
  * @param overrideMessage - A string to override the default message or a callback to define a custom message function.
- * @returns A custom schema for ULID validation.
+ * @returns A custom schema for roman numeral validation.
  */
-export const ulid = (
+export const romanNumeral = (
 	overrideMessage?: string | ((value: CustomIssue) => string),
 ): CustomSchema<string, ErrorMessage<CustomIssue>> => {
 	const message = typeof overrideMessage === 'string' ? () => overrideMessage : overrideMessage || defaultMessage;
@@ -28,7 +37,7 @@ export const ulid = (
 };
 
 /**
- * Type for the output of the ULID schema.
- * @typedef {InferOutput<ReturnType<typeof ulid>>} UlidSchema
+ * Type for the output of the roman numeral schema.
+ * @typedef {InferOutput<ReturnType<typeof romanNumeral>>} RomanNumeralSchema
  */
-export type UlidSchema = InferOutput<ReturnType<typeof ulid>>;
+export type RomanNumeralSchema = InferOutput<ReturnType<typeof romanNumeral>>;
