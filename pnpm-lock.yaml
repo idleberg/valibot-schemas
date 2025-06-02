@@ -77,10 +77,6 @@ importers:
         version: 3.1.3(@types/node@22.15.17)(jiti@2.4.2)
 
   packages/roman-numerals:
-    dependencies:
-      romans:
-        specifier: ^3.0.0
-        version: 3.0.0
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -1981,9 +1977,6 @@ packages:
     resolution: {integrity: sha512-tfUOg6DTP4rhQ3VjOO6B4wyrJnGOX85requAXvqYTHsOgb2TFJdZ3aWpT8W2kPoypSGP7dZUyzxJ9ee4buM5Fg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
-
-  romans@3.0.0:
-    resolution: {integrity: sha512-7DDsAfhtpRr/ZFQXiHDrC3Pe00agcAsFiNt5nNx4ZAQlsc6yJG0mvXA5WAvO8YZyOg349twm2GYhHLw7rCXAzw==}
 
   run-applescript@7.0.0:
     resolution: {integrity: sha512-9by4Ij99JUr/MCFBUkDKLWK3G9HVXmabKz9U5MlIAIuvuzkiOicRYs8XJLxX+xahD+mLiiCYDqF9dKAgtzKP1A==}
@@ -4168,8 +4161,6 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.40.2
       '@rollup/rollup-win32-x64-msvc': 4.40.2
       fsevents: 2.3.3
-
-  romans@3.0.0: {}
 
   run-applescript@7.0.0: {}
 

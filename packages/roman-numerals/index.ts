@@ -3,16 +3,21 @@
  * @module
  */
 
-import romans from 'romans';
 import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
 
+/**
+ * Regular expression pattern for validating Roman numerals.
+ * Ensures proper character combinations and repetition rules.
+ *
+ * Copyright (c) 2023 Jeremy Bunting
+ * @license MIT
+ * @see {@link https://github.com/qbunt/romans}
+ */
+const ROMAN_PATTERN_REGEX =
+	/^(M{1,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|C?D|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|X?L|L?X{1,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|I?V|V?I{1,3}))$/;
+
 const isValid = (value: string): boolean => {
-	try {
-		romans.deromanize(value);
-		return true;
-	} catch (e) {
-		return false;
-	}
+	return ROMAN_PATTERN_REGEX.test(value);
 };
 
 const check = (value: unknown): boolean => {

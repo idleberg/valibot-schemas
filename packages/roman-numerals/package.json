@@ -36,7 +36,6 @@
 		"README.md"
 	],
 	"dependencies": {
-		"romans": "^3.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "catalog:",
