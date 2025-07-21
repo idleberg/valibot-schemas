@@ -1,6 +1,6 @@
 {
 	"name": "valibot-schema-roman-numerals",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Valibot schema for Roman numerals",
 	"scripts": {
 		"build": "tsup",
@@ -21,7 +21,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/idleberg/valibot-schemas"
+		"url": "git+https://github.com/idleberg/valibot-schemas.git"
 	},
 	"homepage": "https://github.com/idleberg/valibot-schemas/tree/main/packages/roman-numerals",
 	"type": "module",
@@ -35,8 +35,7 @@
 		"LICENSE",
 		"README.md"
 	],
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@types/node": "catalog:",
 		"np": "catalog:",
