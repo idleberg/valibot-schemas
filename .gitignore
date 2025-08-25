@@ -11,3 +11,7 @@ test.ts
 
 # Build
 dist/
+
+# Test
+coverage/
+test-results/
