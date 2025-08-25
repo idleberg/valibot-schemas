@@ -6,7 +6,7 @@
 import KSUID from 'ksuid';
 import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
 
-// additional check required since KSUID.parse() accepts invalid Base62 strings
+// additional check required since KSUID.parse() accepts Base62 strings that are no valid KSUIDs
 const BASE62_REGEX = /^[A-Za-z0-9+/]{27}$/;
 
 const check = (value: unknown): boolean => {
