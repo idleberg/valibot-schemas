@@ -3,7 +3,7 @@
  * @module
  */
 
-import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
+import { type CustomIssue, type CustomSchema, custom, type ErrorMessage, type InferOutput } from 'valibot';
 
 /**
  * Regular expression pattern for validating Roman numerals.

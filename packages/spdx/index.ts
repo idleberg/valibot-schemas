@@ -4,7 +4,7 @@
  */
 
 import licenses from 'spdx-license-list';
-import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
+import { type CustomIssue, type CustomSchema, custom, type ErrorMessage, type InferOutput } from 'valibot';
 
 const licenseIds = Object.keys(licenses);
 const osiIds = Object.entries(licenses)

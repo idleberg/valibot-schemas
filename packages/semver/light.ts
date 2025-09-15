@@ -3,7 +3,7 @@
  * @module
  */
 
-import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
+import { type CustomIssue, type CustomSchema, custom, type ErrorMessage, type InferOutput } from 'valibot';
 
 const SEMVER_REGEX =
 	/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;

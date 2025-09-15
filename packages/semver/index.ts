@@ -4,7 +4,7 @@
  */
 
 import { valid, validRange } from 'semver';
-import { type CustomIssue, type CustomSchema, type ErrorMessage, type InferOutput, custom } from 'valibot';
+import { type CustomIssue, type CustomSchema, custom, type ErrorMessage, type InferOutput } from 'valibot';
 
 const check = (value: unknown): boolean => {
 	return typeof value === 'string' && Boolean(valid(value));
