@@ -6,7 +6,7 @@ catalog:
   "@types/node": ^24
   lefthook: ^1.12
   np: ^10.2
-  tsup: ^8.5
+  tsdown: ^0.15
   typescript: ^5.8
   valibot: ^1.1.0
   vitest: ^3.2

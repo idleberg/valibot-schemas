@@ -3,8 +3,8 @@
 	"version": "0.2.1",
 	"description": "Valibot schema for SPDX identifiers",
 	"scripts": {
-		"build": "tsup",
-		"dev": "tsup --watch",
+		"build": "tsdown",
+		"dev": "tsdown --watch",
 		"lint": "biome check",
 		"prepack": "npm run build",
 		"publish:jsr": "deno publish",
@@ -41,7 +41,7 @@
 	"devDependencies": {
 		"@types/node": "catalog:",
 		"np": "catalog:",
-		"tsup": "catalog:",
+		"tsdown": "catalog:",
 		"valibot": "catalog:",
 		"vitest": "catalog:"
 	},
