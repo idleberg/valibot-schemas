@@ -2,9 +2,9 @@ packages:
   - packages/*
 
 catalog:
-  "@biomejs/biome": ^2.2
+  "@biomejs/biome": ^2.2.4
   "@types/node": ^24
-  lefthook: ^1.12
+  lefthook: ^1.13
   np: ^10.2
   tsdown: ^0.15
   typescript: ^5.8
