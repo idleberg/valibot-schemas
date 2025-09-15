@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
-		"lint": "biome lint --no-errors-on-unmatched --vcs-enabled=true --vcs-use-ignore-file=true",
+		"lint": "biome check",
 		"prepack": "npm run build",
 		"publish:jsr": "deno publish",
 		"publish:npm": "np --no-tag --package-manager pnpm",
