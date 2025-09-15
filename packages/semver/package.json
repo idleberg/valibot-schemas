@@ -39,11 +39,11 @@
 		"README.md"
 	],
 	"dependencies": {
-		"semver": "^7.7.1"
+		"semver": "^7.7.2"
 	},
 	"devDependencies": {
 		"@types/node": "catalog:",
-		"@types/semver": "^7.7.0",
+		"@types/semver": "^7.7.1",
 		"np": "catalog:",
 		"tsdown": "catalog:",
 		"valibot": "catalog:",

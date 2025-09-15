@@ -12,7 +12,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@biomejs/biome": "catalog:",
-		"@changesets/cli": "^2.29.6",
+		"@changesets/cli": "^2.29.7",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@idleberg/configs": "^0.2.0",

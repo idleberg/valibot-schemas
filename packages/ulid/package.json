@@ -36,7 +36,7 @@
 		"README.md"
 	],
 	"dependencies": {
-		"ulid": "^3.0.0"
+		"ulid": "^3.0.1"
 	},
 	"devDependencies": {
 		"@types/node": "catalog:",
