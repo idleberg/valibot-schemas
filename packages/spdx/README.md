@@ -8,7 +8,7 @@
 [![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/valibot-schemas/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/valibot-schemas/actions/workflows/node.yml)
 
 > [!NOTE]
-> This libray isn't as lightweight as most built-in Valibot schemas, so it might not be suitable for some use-cases.
+> This library isn't as lightweight as most built-in Valibot schemas, so it might not be suitable for some use-cases.
 
 ## Installation
 
